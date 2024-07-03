@@ -7,9 +7,11 @@ const Notes = () => {
   const colors = ["#ffcccc", "#ccffcc", "#ccccff", "#ffffcc", "#ffccff"];
   useEffect(() => {
     const existingDataString = localStorage.getItem("myData");
+    // console.log(existingDataString)
     if (existingDataString) {
       const existingData = JSON.parse(existingDataString);
       setData(existingData);
+      console.log(existingData)
     }
   }, []);
 

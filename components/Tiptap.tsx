@@ -4,13 +4,28 @@ import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Toolbar from "./Toolbar";
 import Underline from "@tiptap/extension-underline";
+// import Ai from '@tiptap-pro/extension-ai'
 
 const Tiptap = ({ onChange, content }: any) => {
   const handleChange = (newContent: string) => {
     onChange(newContent);
   };
   const editor = useEditor({
-    extensions: [StarterKit, Underline],
+    extensions: [StarterKit, Underline,
+
+      // Ai.configure({
+      //   // Your Tiptap Content AI app id
+      //   appId: 'APP_ID_HERE',
+      //   // This needs to be your generated JWT and MUST NOT be the OpenAI API key!
+      //   token: 'TOKEN_HERE',
+      //   autocompletion: true,
+      //   // … other options (see below)
+      // }),
+
+
+
+    ],
+
     editorProps: {
       attributes: {
         class:
